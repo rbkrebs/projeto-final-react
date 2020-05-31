@@ -6,10 +6,10 @@ import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
 import './NavBar.scss';
 
 const NavBar = () => (
-    <navbar className = "navbar" data-testid = "navbar">       
+    <nav className = "navbar" data-testid = "navbar">       
        <FontAwesomeIcon icon={faSearch} /> 
        <FontAwesomeIcon icon={faShoppingBag} />  
-            </navbar>
+            </nav>
 )
 
 export default NavBar;

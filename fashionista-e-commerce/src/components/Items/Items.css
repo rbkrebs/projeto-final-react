@@ -1,0 +1,12 @@
+.navbar__shop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(204, 204, 216);
+    border-color: rgb(201, 177, 177);
+    border-style: solid;    
+    border-radius: 50%;
+    font-weight: bold;
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import store from './store';
-import Article from './components/Article';
+
 
 import * as serviceWorker from './serviceWorker';
 
@@ -11,7 +11,6 @@ import App from './containers/App';
 ReactDOM.render( 
   <Provider store = {store}>
     <App />
-    <Article/>
     
     </Provider> , 
   document.getElementById('root')

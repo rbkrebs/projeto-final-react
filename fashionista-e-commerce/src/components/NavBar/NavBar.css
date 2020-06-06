@@ -1,0 +1,23 @@
+button {
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
+	outline: none;
+	margin-right: 10px;
+}
+
+.navbar__buttons{
+	display: flex;
+	
+}
+.navbar__button{
+  
+		color: black;
+		font-size: 1.2rem;
+}
+
+.navbar_button_shop{
+	display: flex;
+	align-items: center;
+	
+}

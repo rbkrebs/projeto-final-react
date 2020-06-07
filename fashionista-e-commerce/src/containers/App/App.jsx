@@ -1,23 +1,19 @@
 import React from 'react';
 
+import "./App.css";
+
 import Topbar from '../../components/TopBar';
-
-
-import Article from '../../components/Article';
+import Produto from '../../components/Produto';
 
 import { useSelector} from 'react-redux';
 
   
-export default function App(){
-
-    const store = useSelector(state => state);
-    console.log(store);
-
+export default function App(){    
 
     return(
-        <div data-testid="app">
+        <div className="app" data-testid="app">
                 <Topbar/>
-                <Article/>
+                <Produto/>
             </div>
     )
   };

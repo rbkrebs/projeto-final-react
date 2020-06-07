@@ -26,9 +26,10 @@
 	
 }
 .catalogo__produto:hover{
-	transition: all 0.5s ease-in-out;
-	transform: scale(1.1);
+	transition: all 0.3s ease-in-out;
+	transform: scale(1.05);
 	box-shadow: 5px 5px 15px 10px rgb(172, 165, 165);
+	cursor: pointer;
 }
 
 figure{
@@ -48,6 +49,19 @@ figure img{
 	justify-content: space-around;
 	align-items: center;
 	background-color: wheat;
+}
+
+.catalogo__footer__desconto{
+	display: flex;
+	flex-direction: row;
+
+}
+.catalogo__preco__desconto{
+	background-color: rgb(231, 221, 220);
+	color: rgb(155, 153, 153);
+	text-decoration: line-through;
+	margin-right: 10px;
+	
 }
 
 .catalogo__produto__desconto{

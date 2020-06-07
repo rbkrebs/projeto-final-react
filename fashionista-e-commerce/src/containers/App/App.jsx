@@ -1,19 +1,26 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import "./App.css";
 
+import Home from '../Home'
+import Product from '../Product'
 import Topbar from '../../components/TopBar';
-import Produto from '../../components/Produto';
 
-import { useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 
-  
-export default function App(){    
 
-    return(
-        <div className="app" data-testid="app">
-                <Topbar/>
-                <Produto/>
-            </div>
+export default function App() {
+
+    const store = useSelector(state => state);
+
+    return (
+        <BrowserRouter>
+            <Topbar />
+            <Switch>
+                <Route exact path="/" component={Home} />
+                <Route path="/product/:name" component={Product} />
+            </Switch>
+        </BrowserRouter>
     )
-  };
+};

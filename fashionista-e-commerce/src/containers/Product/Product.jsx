@@ -13,28 +13,37 @@ export default function Product() {
 
     const store = useSelector(state => state);
     const { name } = useParams();
-    const valor = store.products.filter((product) => {return product.code_color === name})[0]
+    const valor = store.products.filter((product) => { return product.code_color === name })[0]
     console.log(valor);
-   
+
 
     return (
 
         <div className="product" data-testid="product">
-            <figure>
-                <img src={valor.image} alt="" />
-            </figure>
-    <span>{valor.name}</span>
-    <span>{valor.actual_price}</span>
-    <span>Em até {valor.installments}</span>
-    <p>Escolha o tamanho</p>
-            <ul>
-                {valor.sizes.map((size)=>{
-                    return(
-                    <span>{size.size}</span>
-                    )
-                })}
-            </ul>
-            <button>Adicionar à Sacola</button>
+            <div className="product__figure">
+                <figure>
+                    <img src={valor.image} alt="" />
+                </figure>
+            </div>
+            <div className="product__infos">
+                <span>{valor.name}</span>
+                <div className="product__price">
+                    <span>{valor.actual_price}</span>
+                    <span>em até {valor.installments}</span>
+                </div>
+            
+                <p>Escolha o tamanho</p>
+                <ul>
+                    {valor.sizes.map((size) => {
+                        if(size.available){
+                        return (
+                            <li className="product__size__selected">{size.size}</li>
+                        )}
+                    })}
+                </ul>
+                
+                <button className="product__button">Adicionar à Sacola</button>
+            </div>
         </div>
 
 

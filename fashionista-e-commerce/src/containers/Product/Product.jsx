@@ -2,19 +2,24 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 
 import "./Product.css";
-
-
-
-import { useSelector } from 'react-redux';
+import Size from "../../components/Size"
+import { getSize } from "../../actions"
+import { useSelector, useDispatch } from 'react-redux';
 
 
 export default function Product() {
 
 
-    const store = useSelector(state => state);
+    const { products, sizeIndex, productSelected } = useSelector(state => state);
+   
+    const dispatch = useDispatch();
     const { name } = useParams();
-    const valor = store.products.filter((product) => { return product.code_color === name })[0]
-    console.log(valor);
+    const valor = products.filter((product) => { return product.code_color === name })[0]
+    const selectSize = size => {
+        console.log(sizeIndex)
+        dispatch(getSize(size))};
+   
+  
 
 
     return (
@@ -22,22 +27,25 @@ export default function Product() {
         <div className="product" data-testid="product">
             <div className="product__figure">
                 <figure>
-                    <img src={valor.image} alt="" />
+                    <img src={productSelected.image} alt="" />
                 </figure>
             </div>
             <div className="product__infos">
-                <span>{valor.name}</span>
+                <span>{productSelected.name}</span>
                 <div className="product__price">
-                    <span>{valor.actual_price}</span>
-                    <span>em até {valor.installments}</span>
+                    <span>{productSelected.actual_price}</span>
+                    <span>em até {productSelected.installments}</span>
                 </div>
             
                 <p>Escolha o tamanho</p>
                 <ul>
-                    {valor.sizes.map((size) => {
+                    {productSelected.sizes.map((size, index) => {
                         if(size.available){
                         return (
-                            <li className="product__size__selected">{size.size}</li>
+                            <Size key={index}                           
+                            index = { index }
+                            handleClick = {selectSize}
+                            size = {size}/>
                         )}
                     })}
                 </ul>

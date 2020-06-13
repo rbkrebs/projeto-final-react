@@ -4,7 +4,11 @@ import Brand from '../Brand';
 import NavBar from '../NavBar';
 import './TopBar.css';
 
-const TopBar = () => (
+
+
+export default function TopBar (){
+
+    return(
     <header className="topbar" data-testid="topbar">
         <div className="container">
             <Link to="/" className="topbar__logo">
@@ -15,6 +19,6 @@ const TopBar = () => (
             </div>
         </div>
     </header>
-)
+    )
+}
 
-export default TopBar;

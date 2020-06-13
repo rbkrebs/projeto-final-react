@@ -3,27 +3,33 @@ import { useParams } from 'react-router-dom';
 
 import "./Product.css";
 import Size from "../../components/Size"
-import { getSize } from "../../actions"
+import { getSize, addItemBag } from "../../actions"
 import { useSelector, useDispatch } from 'react-redux';
 
 
 export default function Product() {
 
 
-    const { products, sizeIndex, productSelected } = useSelector(state => state);
+    const { sizeIndex, productSelected } = useSelector(state => state);
    
     const dispatch = useDispatch();
-    const { name } = useParams();
-    const valor = products.filter((product) => { return product.code_color === name })[0]
-    const selectSize = size => {
-        console.log(sizeIndex)
-        dispatch(getSize(size))};
+    //const { name } = useParams();    
+    const selectSize = size => dispatch(getSize(size));
+
+    const handleSubmit = event =>{
+        event.preventDefault();
+        console.log(sizeIndex)  
+        dispatch(getSize(0));   
+        dispatch(addItemBag(productSelected, sizeIndex))
+      
+       
+    }
    
   
 
 
     return (
-
+        
         <div className="product" data-testid="product">
             <div className="product__figure">
                 <figure>
@@ -36,7 +42,7 @@ export default function Product() {
                     <span>{productSelected.actual_price}</span>
                     <span>em até {productSelected.installments}</span>
                 </div>
-            
+                <form onSubmit={ handleSubmit }>
                 <p>Escolha o tamanho</p>
                 <ul>
                     {productSelected.sizes.map((size, index) => {
@@ -50,10 +56,12 @@ export default function Product() {
                     })}
                 </ul>
                 
-                <button className="product__button">Adicionar à Sacola</button>
+                <button type= "submit" disabled={sizeIndex === undefined? true: false} className="product__button">Adicionar à Sacola</button>
+                 </form>
             </div>
         </div>
+       
 
 
     )
-};
+}

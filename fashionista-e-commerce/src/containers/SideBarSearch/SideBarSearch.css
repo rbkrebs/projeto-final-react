@@ -1,0 +1,15 @@
+.sideBarSearch__open{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    position: fixed;
+    height: 100%;
+    right: 0;
+    top: 60px;
+    margin: 0;   
+    background-color: khaki;
+    z-index: 10;
+}
+
+
+

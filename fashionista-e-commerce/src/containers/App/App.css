@@ -1,9 +1,12 @@
 body{
     background-color: rgb(243, 237, 237);
-    padding-top: 100px;;
+    padding-top: 100px;    
 }
 
+
+
 .app__produtos__quantidade{
+    margin-left: 20px;
     margin-top: 10px;
     font-size: 1.2rem;
     color: rgb(182, 179, 179);

@@ -20,7 +20,8 @@
 
 figure{
 
-	margin: 0;		
+	margin: 0;
+	padding: 5px;		
 	
 }
 
@@ -34,7 +35,7 @@ figure img{
 	height: 50px;
 	justify-content: space-around;
 	align-items: center;
-	background-color: wheat;
+	background-color: rgb(223, 221, 217);
 }
 
 .catalogo__footer__desconto{
@@ -43,10 +44,11 @@ figure img{
 
 }
 .catalogo__preco__desconto{
-	background-color: rgb(231, 221, 220);
-	color: rgb(155, 153, 153);
+
+	color: rgb(107, 104, 104);
 	text-decoration: line-through;
 	margin-right: 10px;
+	font-weight: bolder;
 	
 }
 
@@ -54,9 +56,10 @@ figure img{
 	position: absolute;
 	top: 0;
 	right: 0;
-	background-color: teal;
+	background-color: rgb(0, 0, 0);
 	padding: 10px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	color: white;
 }

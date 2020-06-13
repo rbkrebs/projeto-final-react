@@ -1,6 +1,7 @@
 .product{
     display: flex;
     justify-content: center;
+
 }
 
 .product__figure{
@@ -26,7 +27,7 @@
 }
 
 .product__price span:nth-last-child(1){
-    color: rgb(157, 157, 160);
+    color: rgb(89, 89, 92);
  }
 
  p{

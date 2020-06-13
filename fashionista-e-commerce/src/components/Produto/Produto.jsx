@@ -27,7 +27,7 @@ export default function Produto() {
                    
                     return (
                         
-                        <Link key={index} to={`/product/${product.code_color}`} >
+                        <Link className = "text-link" key={index} to={`/product/${product.code_color}`} >
                             <Card product={ product } handleClick = {selectProduct}/>                            
                         </Link>
                     )

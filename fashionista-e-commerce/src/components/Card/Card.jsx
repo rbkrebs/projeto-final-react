@@ -9,7 +9,7 @@ export default function Card({product, handleClick}) {
         product.on_sale ?
         <li  className="catalogo__produto" data-testid="produto" onClick={() => handleClick(product)} >
             <span className="catalogo__produto__desconto">{product.discount_percentage}</span>
-            <figure>
+            <figure >
                 <img src={product.image} alt={product.name} />
             </figure>
             <div className="catalogo__footer">

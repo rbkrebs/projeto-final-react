@@ -1,15 +1,21 @@
 import React from 'react';
 
-
+import { useSelector } from 'react-redux'
 
 import './Items.css';
 
 
 
-const Items = () => (
-    <div className = "navbar__shop" data-testid = "items"> 
-   2
-            </div>
-)
 
-export default Items;
+export default function Items() {
+    const { productsListBag } = useSelector(state => state);
+  
+    return(
+        productsListBag.length > 0 ?
+    <div className = "navbar__shop" data-testid = "items"> 
+   {productsListBag.length}
+            </div>
+            :null
+    )
+}
+

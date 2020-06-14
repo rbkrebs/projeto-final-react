@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 
 import "./Product.css";
 import Size from "../../components/Size"
-import { getSize, addItemBag } from "../../actions"
+import { getSize, addItemBag, addProduct } from "../../actions"
 import { useSelector, useDispatch } from 'react-redux';
 
 
@@ -17,9 +17,9 @@ export default function Product() {
     const selectSize = size => dispatch(getSize(size));
 
     const handleSubmit = event =>{
-        event.preventDefault();
-        console.log(sizeIndex)  
-        dispatch(getSize(0));   
+        event.preventDefault();       
+        dispatch(getSize(0)); 
+        dispatch(addProduct(productSelected, sizeIndex))  
         dispatch(addItemBag(productSelected, sizeIndex))
       
        

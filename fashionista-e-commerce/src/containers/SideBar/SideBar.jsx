@@ -1,6 +1,11 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { toggleSideBar } from "../../actions"
+import SideBarSearch from "../SideBarSearch"
+import SideBarListShop from "../SideBarListShop"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faWindowClose } from "@fortawesome/free-solid-svg-icons";
+
 
 import './SideBar.css'
 
@@ -14,7 +19,9 @@ export default function SideBar(){
    
     return(
         <div className= {openSideBar?"sideBar__open": "sideBar__closed"}>
-            <button onClick={toggleMenu}>x</button>
+            <button><FontAwesomeIcon icon={faWindowClose} onClick={toggleMenu}/></button>
+            
+            <SideBarListShop/>
         </div>
     )
 }

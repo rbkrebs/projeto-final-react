@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
-import { getProduct } from "../../actions"
+import { viewProduct } from "../../actions"
 
 import Card from "../Card"
 
@@ -14,10 +14,7 @@ export default function Produto() {
 
     const {products, productSelected} = useSelector(state => state);
     const dispatch = useDispatch();
-    const selectProduct = product => dispatch(getProduct(product));
-
-
-    
+    const selectProduct = product => dispatch(viewProduct(product));   
 
 
     return (

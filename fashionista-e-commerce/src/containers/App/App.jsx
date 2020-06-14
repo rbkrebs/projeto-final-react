@@ -9,9 +9,7 @@ import Topbar from '../../components/TopBar';
 import SideBar from '../SideBar';
 
 
-export default function App() {
-
-  
+export default function App() { 
 
     return (
         <BrowserRouter>

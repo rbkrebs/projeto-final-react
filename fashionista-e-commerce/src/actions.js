@@ -8,22 +8,56 @@ export function getSize(index){
     
 }
 
-export function getProduct(product){
+export function viewProduct(product){
 
     return{
 
-        type: "GET_PRODUCT",
+        type: "VIEW_PRODUCT",
         payload: product
     }
 }
 
-export function addItemBag(productSelected, sizeIndex){   
+export function addItemBag(product, sizeIndex){   
+
+    
+    return{
+
+        type: "SET_BAG",
+        
+    }
+}
+
+export function addProduct(product, sizeIndex){ 
+    
 
     return{
 
-        type: "ADD_ITEM_BAG",
+        type: "SET_ADD_PRODUCT",
         payload:{
-            product: productSelected,
+            product: product,
+            size: sizeIndex
+        }
+    }
+}
+
+export function removeProduct(product, sizeIndex){   
+
+    return{
+
+        type: "SET_REMOVE_PRODUCT",
+        payload:{
+            product: product,
+            size: sizeIndex
+        }
+    }
+}
+export function deleteProduct(product, sizeIndex){   
+
+    return{
+
+        type: "SET_DELETE_PRODUCT",
+        payload:{
+            product: product,
             size: sizeIndex
         }
     }

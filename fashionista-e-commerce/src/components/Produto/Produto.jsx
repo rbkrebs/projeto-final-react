@@ -12,7 +12,7 @@ import './Produto.css';
 
 export default function Produto() {
 
-    const {products, productSelected} = useSelector(state => state);
+    const {products} = useSelector(state => state);
     const dispatch = useDispatch();
     const selectProduct = product => dispatch(viewProduct(product));   
 
@@ -24,7 +24,7 @@ export default function Produto() {
                    
                     return (
                         
-                        <Link className = "text-link" key={index} to={`/product/${product.code_color}`} >
+                        <Link className = "text-link" to={`/product/${product.code_color}`} >
                             <Card product={ product } handleClick = {selectProduct}/>                            
                         </Link>
                     )

@@ -6,6 +6,7 @@ const INITIAL_STATE = {
     productAdded: {},
     sizeIndex: false,
     productsListBag: [],
+    productsListSearch: [],
     openSideBar: false,
     openSearch: false,
     totalPrice: 0,
@@ -18,6 +19,7 @@ function reducer(state = INITIAL_STATE, action) {
     switch (action.type) {
 
         case "VIEW_PRODUCT":
+          
             return {
                 ...state,
                 productSelected: action.payload
@@ -114,6 +116,14 @@ function reducer(state = INITIAL_STATE, action) {
                 totalPrice: state.productsListBag.reduce((total, product) =>{
                     return total + parseFloat(action.payload.actual_price.slice(3,-1).replace(',','.'))*product.quantity
                 },0) 
+            }
+
+            case "GET_PRODUCTS":
+            return {
+                ...state,
+                productsListSearch:  state.products.filter((product) => product.name.toLowerCase().includes(action.payload.toLowerCase()))
+                  
+                
             }
 
         default:

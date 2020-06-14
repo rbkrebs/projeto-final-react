@@ -1,14 +1,20 @@
-.sideBarSearch__open{
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    position: fixed;
-    height: 100%;
-    right: 0;
-    top: 60px;
-    margin: 0;   
-    background-color: khaki;
-    z-index: 10;
+.sideBarSearch{
+  
+        overflow-y:auto;
+        width: 100%;
+        margin: 5px;
+
+}
+.sideBarSearch__label{
+    padding: 20px;
+    font-size: 1.2em;
+}
+
+.sideBarSearch__input{
+
+    width: 90%;
+    height: 30px;
+    font-size: 1.2em;
 }
 
 

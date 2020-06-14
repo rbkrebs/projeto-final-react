@@ -47,11 +47,6 @@ export default function SideBarListShop() {
 
     }
 
-
-
-
-
-
     return (<div className="sideBarListShop">
 
         <span className="SideBarListShop__bagInfo">Quantidades de itens na sacola {totalItems}</span>

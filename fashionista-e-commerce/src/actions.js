@@ -10,6 +10,7 @@ export function getSize(index){
 
 export function viewProduct(product){
 
+
     return{
 
         type: "VIEW_PRODUCT",
@@ -17,7 +18,7 @@ export function viewProduct(product){
     }
 }
 
-export function addItemBag(product, sizeIndex){   
+export function addItemBag(){   
 
     
     return{
@@ -93,6 +94,18 @@ export function getTotalPrice(productSelected){
 
         type: "GET_TOTAL_PRICE",
         payload: productSelected        
+        
+    }
+}
+
+
+export function getProducts(product){    
+  
+
+    return{
+
+        type: "GET_PRODUCTS",
+        payload: product        
         
     }
 }

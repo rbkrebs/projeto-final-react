@@ -8,12 +8,12 @@ import './Items.css';
 
 
 export default function Items() {
-    const { productsListBag } = useSelector(state => state);
+    const { productsListBag, totalItems } = useSelector(state => state);
   
     return(
         productsListBag.length > 0 ?
     <div className = "navbar__shop" data-testid = "items"> 
-   {productsListBag.length}
+   {totalItems}
             </div>
             :null
     )

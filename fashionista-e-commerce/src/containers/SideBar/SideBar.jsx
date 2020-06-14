@@ -13,15 +13,17 @@ import './SideBar.css'
 export default function SideBar(){
 
     const dispatch = useDispatch();
-    const toggleMenu = () => dispatch(toggleSideBar(false));
+    const toggleMenu = (openSideBar, openSearch) => dispatch(toggleSideBar(openSideBar, openSearch));
 
-    const { openSideBar } = useSelector(state => state);
+    const { openSideBar, openSearch } = useSelector(state => state);
    
     return(
-        <div className= {openSideBar?"sideBar__open": "sideBar__closed"}>
-            <button><FontAwesomeIcon icon={faWindowClose} onClick={toggleMenu}/></button>
+       
+        <div className={openSideBar ?  "sideBar__open":  "sideBar__closed"}>
+            <button className="SideBar__Button__Close"><FontAwesomeIcon icon={faWindowClose} onClick={() => toggleMenu(false, false)}/></button>
+            {openSearch ? <SideBarSearch/> : <SideBarListShop/>}            
             
-            <SideBarListShop/>
         </div>
+      
     )
 }

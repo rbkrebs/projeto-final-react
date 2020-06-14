@@ -12,13 +12,13 @@ import Items from "../Items/Items"
 export default function NavBar() {
 
     const dispatch = useDispatch();
-    const toggleMenu = () => dispatch(toggleSideBar(true));
+    const toggleMenu = (openSideBar, openSearch) => dispatch(toggleSideBar(openSideBar, openSearch));
     return(
-    <div className = "navbar__buttons" data-testid="navbar" onClick={toggleMenu}>
-        <button className="navbar__button">
+    <div className = "navbar__buttons" data-testid="navbar" >
+        <button className="navbar__button" onClick={() => toggleMenu(true, true)}>
             <FontAwesomeIcon icon={faSearch} />
         </button>
-        <button className= "navbar__button navbar_button_shop" onClick={toggleMenu}>
+        <button className= "navbar__button navbar_button_shop" onClick={() => toggleMenu(true, false)}>
             <FontAwesomeIcon icon={faShoppingBag} />
             <Items/>
         </button>

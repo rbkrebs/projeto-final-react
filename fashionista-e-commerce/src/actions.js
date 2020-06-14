@@ -40,36 +40,59 @@ export function addProduct(product, sizeIndex){
     }
 }
 
-export function removeProduct(product, sizeIndex){   
+export function removeProduct(sizeIndex){   
 
     return{
 
         type: "SET_REMOVE_PRODUCT",
-        payload:{
-            product: product,
+        payload:{            
             size: sizeIndex
         }
     }
 }
-export function deleteProduct(product, sizeIndex){   
+export function deleteProduct(sizeIndex){   
 
     return{
 
         type: "SET_DELETE_PRODUCT",
         payload:{
-            product: product,
+           
             size: sizeIndex
         }
     }
 }
 
-export function toggleSideBar(boolean){    
+export function toggleSideBar(openSideBar,openSearch){    
   
 
     return{
 
         type: "TOGGLE_SIDEBAR",
-        payload: boolean
+        payload:{
+            openSideBar:openSideBar,
+            openSearch:openSearch
+        } 
+        
+    }
+}
+
+export function getTotalItems(){    
+  
+
+    return{
+
+        type: "GET_TOTAL_ITEMS"        
+        
+    }
+}
+
+export function getTotalPrice(productSelected){    
+  
+
+    return{
+
+        type: "GET_TOTAL_PRICE",
+        payload: productSelected        
         
     }
 }

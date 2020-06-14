@@ -1,3 +1,86 @@
 .sideBarListShop{
     overflow-y:auto;
+    width: 100%;
+}
+
+.SideBarListShop__bagInfo{
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+.SideBarListShop__item{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 100%;
+    height: 200px;
+    border-bottom: lightslategray;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-top: lightslategray;
+    border-top-style: solid;
+    border-top-width: thin;
+}
+.SideBarListShop__item figure{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 150px;
+    margin-right: 10px;
+}
+
+.SideBarListShop__item__info{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-around;  
+
+}
+.SideBarListShop__item__info span{
+    display: block;
+    margin-bottom: 0.8em;
+    
+}
+.SideBarListShop__item__info > button{
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    color: red;
+   
+}
+.SideBarListShop__item__info > button:hover{
+    font-weight:bolder;
+}
+.SideBarListShop__item__remove{
+    margin-right: 5px;
+}
+
+
+.SideBarListShop__item__update{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+   
+    
+}
+.SideBarListShop__item__update span, button{
+   margin: 0;
+   padding:0 1em;    
+}
+
+.SideBarListShop__totalPrice{
+
+    position: fixed;
+    bottom: 0;
+    padding: 20px;
+    font-size: 1.5em;
+    background-color: rgb(65, 66, 66);
+    width: 100%;
+    color: white;
+    font-weight: bolder;
 }

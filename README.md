@@ -1,5 +1,15 @@
 # Fashionista E-commerce
 
+## Introdução
+
+Esse projeto foi desenvolvido durante a aceleração de React promovida pela [Codenation](https://www.codenation.dev/), atual [TryBe](https://www.betrybe.com/). Ao todo foram 9 módulos mais o projeto final, descrito [abaixo](#Cenário). 
+
+Clique :link: [aqui](https://codenation-react.netlify.app/) para avaliar meu projeto no netlify. 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/25a5102a-9267-421d-b01e-6cbcb4c023be/deploy-status)](https://app.netlify.com/sites/codenation-react/deploys)
+
+
+ 
+
 ## Cenário
 
 Segundo o levantamento, da Webshoppers (Ebit / Nielsen), os e-commerces brasileiros faturaram cerca de R$ 53,2 bilhões em 2018. O segmento **“Moda e Acessórios”** representa **5,6%** do faturamento no varejo online, ocupando a segunda posição entre as categorias de produtos com mais pedidos, perdendo apenas para o segmento de **eletroeletrônicos**.
@@ -67,7 +77,7 @@ Como um profissional front-end, você será responsável por desenvolver as **pr
 
 ## Endpoint - Catálogo de Produtos
 
-https://5f074b869c5c250016306cbf.mockapi.io/api/v1/catalog
+:link: https://5f074b869c5c250016306cbf.mockapi.io/api/v1/catalog
 
 ## Deploy
 
@@ -83,14 +93,20 @@ https://viniciusvinna.netlify.app/react-fashionista
 
 ### Layouts: Home (catálogo)
 
+![Layout Home](fashionista-e-commerce/assets/1.png)
+
 ### Layouts: Página do produto
+
+![Layout Produto](fashionista-e-commerce/assets/2.png)
 
 ### Layouts: Indicador de produtos no ícone do carrinho
 
+![Layout Sacola com Itens](fashionista-e-commerce/assets/3.png)
+
 ### Layouts: Carrinho de compras aberto
+
+![Layout Carrinho Aberto](fashionista-e-commerce/assets/4.png)
 
 ### Layouts: Busca em tempo real
 
-
-
-https://codenation-react.netlify.app/
+![Layout Busca Produtos](fashionista-e-commerce/assets/5.png)
